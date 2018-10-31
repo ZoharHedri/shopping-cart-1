@@ -24,7 +24,7 @@ var ShoppingCart = function () {
     //Meaning we make sure that all our cart items are displayed in the browser.
     //Remember to empty the "cart div" before you re-add all the item elements.
     $('.cart-list').empty();
-
+    // console.log('hi');
     var totalPirce = 0;
 
     for(var i in cart){
