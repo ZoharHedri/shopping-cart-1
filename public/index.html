@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css">
@@ -7,6 +8,7 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   <title>Shopping Cart!</title>
 </head>
+
 <body>
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
@@ -18,16 +20,28 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
+
+        <!--add button to add new item-->
+        <button type="button" class="navbar-toggle collapsed plus">
+          <span class="sr-only">Toggle navigation</span>
+          <i style="font-size:18px;" class="fa fa-plus"></i>
+        </button>
+
         <a class="navbar-brand" href="#">SHOPPING CART</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
+      <div>
         <ul class="nav navbar-nav navbar-right">
+          
           <li class="dropdown">
+            <a href="#" class="view-form" data-toggle="dropdown" role="button">Add new product<i class="fa fa-plus"></i></a>
+          </li>
+
+          <li class="dropdown" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <a href="#" class="view-cart" data-toggle="dropdown" role="button">Shopping Cart<i class="fa fa-shopping-cart"></i></a>
           </li>
+
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -38,17 +52,31 @@
   </div>
 
   <div class="container">
-
     <div class="shopping-cart">
       <p class="cart-title">Items in Cart</p>
       <div class="cart-list"></div>
       <p>
-        <strong> Total: $
+        <strong>Total: $
           <span class="total">0</span>
         </strong>
       </p>
       <button type="button" class="btn clear-cart">Clear Cart</button>
     </div>
+
+    <!-- for adding new product to page -->
+    <form class="addProduct-form">
+        Name :
+        <input type="text" id="name" placeholde="name">
+        Price :
+        <input type="number" id="price" placeholde="price">
+        URL image :
+        <input type="text" id="src" placeholde="url">
+        <br>
+        <input type="button" class="btn" id="AddBtn" value="Add new product">
+        </button>
+        <br>
+        <p id="msgError">This product name is already exist</p>
+    </form>
 
 
     <div class="row">
@@ -99,9 +127,8 @@
           </div>
         </div>
       </div>
-
-    
     </div>
+    
     <div class="row">
       <div class="col-md-4">
         <div class="card-container">
@@ -150,6 +177,7 @@
           </div>
         </div>
       </div>
+
     </div>
   </div>
 
@@ -157,5 +185,8 @@
   <script type="text/javascript" src="bootstrap/dist/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="handlebars/dist/handlebars.min.js"></script>
   <script type="text/javascript" src="script.js"></script>
+  <!-- addItem.js is Extensions for shopping cart exercise-->
+  <script type="text/javascript" src="addItem.js"></script>
 </body>
+
 </html>

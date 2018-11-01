@@ -102,4 +102,66 @@ body {
 
 .clear-cart {
   width: 100%;
+  display: table;
+}
+
+/*addItem.js css */
+input {
+  border-color: gray;
+  display: flex;
+}
+
+.addProduct-form {
+  position: fixed;
+  top: 55px;
+  right: 176px;
+  display: none; /*this is make the form to disappear*/
+  background-color: #fff;
+  box-shadow: 2px 3px 4px #B3B3B3;
+  padding: 15px;
+  z-index: 999;
+  /* min-width: 200px; */
+  border: gray 1px solid;
+}
+
+.remove-item:hover {
+  text-decoration: none;
+}
+
+.remove-item {
+  text-decoration: none;
+  color: #ff5351;
+  font-size: 17px;
+}
+
+.btn{
+  background-color: #ff5351;
+  color: white;
+  margin: 0 auto;
+  display: table;
+}
+
+#msgError{
+  display: none;
+  color:red;
+}
+
+.plus{
+  right: 83px;
+  margin-left: 40px;
+  padding: 5px;
+  padding-left: 13px;
+  padding-top: 8px;
+  padding-right: 13px;
+}
+
+.fa-plus{
+  color:gray;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 2px 0;
+  line-height: 24px;
 }
